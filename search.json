@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "data/Readme.html",
-    "href": "data/Readme.html",
-    "title": "Data Folder",
-    "section": "",
-    "text": "Data Folder\nPlace any data needed by your analysis in this folder. Please do not store large files here. Then read in any data using the ‘data’ path. For example, read_csv(\"data/data.csv\")."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -14,17 +7,24 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "data/Readme.html",
+    "href": "data/Readme.html",
+    "title": "Data Folder",
+    "section": "",
+    "text": "Data Folder\nPlace any data needed by your analysis in this folder. Please do not store large files here. Then read in any data using the ‘data’ path. For example, read_csv(\"data/data.csv\")."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "My Final Project Template",
     "section": "",
-    "text": "[~ 200 words]\nClearly stated background and questions / hypotheses / problems being addressed. Sets up the analysis in an interesting and compelling way. Include figures if you like."
+    "text": "In the State of New York, car dependency has become an important fact within the work culture for many New Yorkers across the state. The question this project will look at is what is the relationship between car ownership and the employment rate in different parts of the state? Will we find places that have high car ownership also to have greater job opportunities and employment rate?\nIf so, how can this research be used to help those who don’t own a car, still have access to job opportunities across the state? The potential answers to this question could also help explain how car ownership is crucial for working in the modern era today. \nThe goal of this Project # Materials and methods\n[~ 200 words]\nNarrative: Clear narrative description of the data sources and methods. Includes data from at least two sources that were integrated / merged in R.\nCode: The code associated with the project is well organized and easy to follow. Demonstrates mastery of R graphics and functions.\nData: The underlying data are publicly accessible via the web and downloaded/accessed within the Rmd script. If you want to use your own data, you must make it available on a website (e.g. Figshare) so that others are able to re-run your code.\nYou can do bullets like this:\n\nThe first most important thing\nThe second most important thing\nThe third most important thing\n\nYou can do numbers like this:\n\nThe first most important thing\nThe second most important thing\nThe third most important thing\n\nSee http://rmarkdown.rstudio.com/ for all the amazing things you can do.\nHere’s my first code chunk.\n\nx=3+4\n\nRefer to output in your narrative like this: x=7 .\nLoad any required packages in a code chunk (you may need to install some packages):\n\nlibrary(tidyverse)\nlibrary(leaflet)\nlibrary(kableExtra)\nlibrary(htmlwidgets)\nlibrary(widgetframe)\nknitr::opts_chunk$set(widgetframe_widgets_dir = 'widgets' ) \nknitr::opts_chunk$set(cache=TRUE)  # cache the results for quick compiling\n\n\n\n\nn=20\ndata=data.frame(x=runif(n,-180,180),\n                y=runif(n,-60,60),\n                size = runif(n, 5, 20),\n                category = factor(\n                  sample(letters[1:5], n, replace = TRUE)\n                  ),\n                value = rnorm(n))\n\ndata %&gt;% \n  slice(1:10) %&gt;% #show only 1:n rows\n  kable(digits=2,align=\"c\")%&gt;% #make table and round to two digits\n  kable_styling(bootstrap_options = \n                  c(\"striped\", \"hover\", \"condensed\", \"responsive\")) #apply other formatting\n\n\n\n\nx\ny\nsize\ncategory\nvalue\n\n\n\n\n-123.87\n-7.60\n8.51\na\n-0.20\n\n\n-123.95\n-5.49\n8.36\nc\n0.58\n\n\n131.14\n17.14\n18.60\nc\n-0.82\n\n\n143.96\n-47.76\n6.09\nd\n-0.94\n\n\n170.98\n29.36\n8.70\nc\n-0.10\n\n\n42.23\n-5.05\n15.84\nd\n0.43\n\n\n-65.65\n40.87\n13.05\nd\n0.95\n\n\n59.12\n8.83\n8.92\nb\n0.58\n\n\n110.86\n28.62\n11.38\nd\n-0.58\n\n\n120.13\n1.18\n16.20\nb\n-0.48\n\n\n\n\nAdd any additional processing steps here."
   },
   {
     "objectID": "index.html#download-and-clean-all-required-data",
     "href": "index.html#download-and-clean-all-required-data",
     "title": "My Final Project Template",
-    "section": "Download and clean all required data",
-    "text": "Download and clean all required data\n\nn=20\ndata=data.frame(x=runif(n,-180,180),\n                y=runif(n,-60,60),\n                size = runif(n, 5, 20),\n                category = factor(\n                  sample(letters[1:5], n, replace = TRUE)\n                  ),\n                value = rnorm(n))\n\ndata %&gt;% \n  slice(1:10) %&gt;% #show only 1:n rows\n  kable(digits=2,align=\"c\")%&gt;% #make table and round to two digits\n  kable_styling(bootstrap_options = \n                  c(\"striped\", \"hover\", \"condensed\", \"responsive\")) #apply other formatting\n\n\n\n\nx\ny\nsize\ncategory\nvalue\n\n\n\n\n-120.30\n47.25\n9.00\nd\n0.69\n\n\n113.87\n2.17\n13.17\ne\n0.90\n\n\n150.13\n-10.13\n15.75\nd\n3.11\n\n\n-25.81\n49.36\n8.91\ne\n0.25\n\n\n-119.50\n-35.22\n9.07\nc\n-2.16\n\n\n-84.23\n-51.54\n18.44\na\n0.43\n\n\n-10.59\n21.30\n12.28\nd\n-1.52\n\n\n-14.09\n56.28\n19.12\nc\n1.65\n\n\n5.78\n-11.83\n10.09\nd\n0.46\n\n\n-95.55\n-0.06\n12.76\na\n0.59\n\n\n\n\nAdd any additional processing steps here."
+    "section": "",
+    "text": "n=20\ndata=data.frame(x=runif(n,-180,180),\n                y=runif(n,-60,60),\n                size = runif(n, 5, 20),\n                category = factor(\n                  sample(letters[1:5], n, replace = TRUE)\n                  ),\n                value = rnorm(n))\n\ndata %&gt;% \n  slice(1:10) %&gt;% #show only 1:n rows\n  kable(digits=2,align=\"c\")%&gt;% #make table and round to two digits\n  kable_styling(bootstrap_options = \n                  c(\"striped\", \"hover\", \"condensed\", \"responsive\")) #apply other formatting\n\n\n\n\nx\ny\nsize\ncategory\nvalue\n\n\n\n\n-123.87\n-7.60\n8.51\na\n-0.20\n\n\n-123.95\n-5.49\n8.36\nc\n0.58\n\n\n131.14\n17.14\n18.60\nc\n-0.82\n\n\n143.96\n-47.76\n6.09\nd\n-0.94\n\n\n170.98\n29.36\n8.70\nc\n-0.10\n\n\n42.23\n-5.05\n15.84\nd\n0.43\n\n\n-65.65\n40.87\n13.05\nd\n0.95\n\n\n59.12\n8.83\n8.92\nb\n0.58\n\n\n110.86\n28.62\n11.38\nd\n-0.58\n\n\n120.13\n1.18\n16.20\nb\n-0.48\n\n\n\n\nAdd any additional processing steps here."
   }
 ]
