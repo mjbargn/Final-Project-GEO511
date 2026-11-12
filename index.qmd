@@ -8,10 +8,11 @@ date-format: long
 
 # Introduction
 
-\[\~ 200 words\]
+In the State of New York, car dependency has become an important fact within the work culture for many New Yorkers across the state. The question this project will look at is what is the relationship between car ownership and the employment rate in different parts of the state? Will we find places that have high car ownership also to have greater job opportunities and employment rate?
 
-Clearly stated background and questions / hypotheses / problems being addressed. Sets up the analysis in an interesting and compelling way. Include figures if you like.
+If so, how can this research be used to help those who don't own a car, still have access to job opportunities across the state? The potential answers to this question could also help explain how car ownership is crucial for working in the modern era today. 
 
+The goal of this Project
 # Materials and methods
 
 \[\~ 200 words\]
