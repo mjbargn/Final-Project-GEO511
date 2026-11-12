@@ -1,7 +1,7 @@
 ---
-title: "My Final Project Template"
-author: Your name here
-subtitle: Subtitle here if desired
+title: "The Relationship between Car Ownership and Employment Rate in New York State"
+author: Michael Bargnesi
+subtitle: Data: Data.ny.gov
 date: today
 date-format: long
 ---
