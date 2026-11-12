@@ -4,8 +4,6 @@ author: Michael Bargnesi
 subtitle: Data: Data.ny.gov
 date: today
 date-format: long
-format:
-  html: default
 ---
 
 # Introduction
@@ -15,11 +13,8 @@ In the State of New York, car dependency has become an important fact within the
 If so, how can this research be used to help those who don't own a car, still have access to job opportunities across the state? The potential answers to this question could also help explain how car ownership is crucial for working in the modern era today. 
 
 The goal of this Project
-# Materials and methods
 
-\[\~ 200 words\]
-
-Narrative: Clear narrative description of the data sources and methods. Includes data from at least two sources that were integrated / merged in R.
+The data was all found withi
 
 Code: The code associated with the project is well organized and easy to follow. Demonstrates mastery of R graphics and functions.
 
@@ -27,17 +22,15 @@ Data: The underlying data are publicly accessible via the web and downloaded/acc
 
 You can do bullets like this:
 
--   The first most important thing
--   The second most important thing
--   The third most important thing
+- The first most important thing
+- The second most important thing
+- The third most important thing
 
 You can do numbers like this:
 
 1.  The first most important thing
 2.  The second most important thing
 3.  The third most important thing
-
-See <http://rmarkdown.rstudio.com/> for all the amazing things you can do.
 
 Here's my first code chunk.
 
@@ -80,9 +73,7 @@ data %>%
                   c("striped", "hover", "condensed", "responsive")) #apply other formatting
 ```
 
-Add any additional processing steps here.
-1
-# Results
+Add any additional processing steps here. 1 \# Results
 
 \[\~200 words\]
 
