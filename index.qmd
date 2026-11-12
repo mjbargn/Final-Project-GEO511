@@ -4,6 +4,8 @@ author: Michael Bargnesi
 subtitle: Data: Data.ny.gov
 date: today
 date-format: long
+format:
+  html: default
 ---
 
 # Introduction
