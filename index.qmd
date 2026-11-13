@@ -37,13 +37,20 @@ Catalog_NY[ grepl("County Employment Data", Catalog_NY$title, ignore.case = TRUE
 NYCountyEmployData <- nys_any_dataset(json_link = "https://data.ny.gov/resource/4v74-29eq.json") #Since we couldn't find the website on the catalog, we use this code with the website API Endpoint to get the dataset
 
 
-NYVehicleData <- nys_pull_dataset(dataset = "w4pv-hbkt", where = "record_type = 'VEH'") #Since this dataset was found inside the catalog, we don't need API Endpoint
+NYVehicleData <- nys_pull_dataset(dataset = "w4pv-hbkt", where = "record_type = 'VEH'") #Since this dataset was found inside the catalog, we don't need API Endpoint. This code also filtered the data to only see Vehicles!
 
 ```
 
 # Map / Filter the Vehicle Data
 ```{r}
 NYS_Counties <- counties( state = "NY", cb = TRUE, year = 2024)
+
+NY_CarOwnership_Map <- NYS_Counties %>%
+  left_join(NYVehicleData, by = c ("NAMELSAD" = "county"))
+
+ggplot(NY_CarOwnership_Map)+
+  geom_sf(aes(fill = COUNTYFP), color ="blue")+
+  labs(title = "Car registrations by county in New York State")
 
 ```
 
