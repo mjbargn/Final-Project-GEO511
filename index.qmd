@@ -18,7 +18,7 @@ The goal of this Project
 
 \[\~ 200 words\]
 
-The data being used to with in this project can all be found within
+The data being used to with in this project can all be found within NY's data. gov website
 
 Code: The code associated with the project is well organized and easy to follow. Demonstrates mastery of R graphics and functions.
 
