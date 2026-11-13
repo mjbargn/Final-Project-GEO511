@@ -5,35 +5,28 @@ subtitle: "Data: Data.ny.gov"
 date: today
 date-format: long
 ---
+
 # Introduction
 
 In the State of New York, car dependency has become an important fact within the work culture for many New Yorkers across the state. The question this project will look at is what is the relationship between car ownership and the employment rate in different parts of the state? Will we find places that have high car ownership also to have greater job opportunities and employment rate?
 
 If so, how can this research be used to help those who don't own a car, still have access to job opportunities across the state? The potential answers to this question could also help explain how car ownership is crucial for working in the modern era today.
 
-The goal of this Project
-
+(*Looking for advice on what else to add here to make it a little bit more enticing!)
 
 The data being used to with in this project can all be found within NY's data. gov website
 
-Code: The code associated with the project is well organized and easy to follow. Demonstrates mastery of R graphics and functions.
+Download / Load Required Packages 
+```{r}
+#'install.packages("nysOpenData")
+library("tidyverse")
+library("nysOpenData")
+library("knitr")
 
-Data: The underlying data are publicly accessible via the web and downloaded/accessed within the Rmd script. If you want to use your own data, you must make it available on a website (e.g. Figshare) so that others are able to re-run your code.
+```
 
-You can do bullets like this:
-
-- The first most important thing
-- The second most important thing
-- The third most important thing
-
-You can do numbers like this:
-
-1.  The first most important thing
-2.  The second most important thing
-3.  The third most important thing
 
 # Conclusions
-
 
 Clear summary adequately describing the results and putting them in context. Discussion of further questions and ways to continue investigation.
 
