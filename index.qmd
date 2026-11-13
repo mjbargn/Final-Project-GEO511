@@ -1,20 +1,24 @@
 ---
 title: "The Relationship between Car Owneship and Employment Rate in the State of New York"
 author: Michael Bargnesi
-subtitle: Subtitle here if desired
+subtitle: Data: Ny.Data.gov
 date: today
 date-format: long
 ---
 
 # Introduction
 
-In the State of New York, car dependency has become an important fact within the work culture for many New Yorkers across the state. The question
+In the State of New York, car dependency has become an important fact within the work culture for many New Yorkers across the state. The question this project will look at is what is the relationship between car ownership and the employment rate in different parts of the state? Will we find places that have high car ownership also to have greater job opportunities and employment rate?
+
+If so, how can this research be used to help those who don't own a car, still have access to job opportunities across the state? The potential answers to this question could also help explain how car ownership is crucial for working in the modern era today.
+
+The goal of this Project
 
 # Materials and methods
 
 \[\~ 200 words\]
 
-Narrative: Clear narrative description of the data sources and methods. Includes data from at least two sources that were integrated / merged in R.
+The data being used to with in this project can all be found within
 
 Code: The code associated with the project is well organized and easy to follow. Demonstrates mastery of R graphics and functions.
 
