@@ -238,13 +238,27 @@ in your R script or .Rprofile.</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>NYCountyEmployData <span class="ot">&lt;-</span> <span class="fu">nys_any_dataset</span>(<span class="at">json_link =</span> <span class="st">"https://data.ny.gov/resource/4v74-29eq.json"</span>) <span class="co">#Since we couldn't find the website on the catalog, we use this code with the website API Endpoint to get the dataset</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>NYVehicleData <span class="ot">&lt;-</span> <span class="fu">nys_pull_dataset</span>(<span class="at">dataset =</span> <span class="st">"w4pv-hbkt"</span>, <span class="at">where =</span> <span class="st">"record_type = 'VEH'"</span>) <span class="co">#Since this dataset was found inside the catalog, we don't need API Endpoint</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>NYVehicleData <span class="ot">&lt;-</span> <span class="fu">nys_pull_dataset</span>(<span class="at">dataset =</span> <span class="st">"w4pv-hbkt"</span>, <span class="at">where =</span> <span class="st">"record_type = 'VEH'"</span>) <span class="co">#Since this dataset was found inside the catalog, we don't need API Endpoint. This code also filtered the data to only see Vehicles!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="map-filter-the-vehicle-data" class="level1">
 <h1>Map / Filter the Vehicle Data</h1>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>NYS_Counties <span class="ot">&lt;-</span> <span class="fu">counties</span>( <span class="at">state =</span> <span class="st">"NY"</span>, <span class="at">cb =</span> <span class="cn">TRUE</span>, <span class="at">year =</span> <span class="dv">2024</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>NYS_Counties <span class="ot">&lt;-</span> <span class="fu">counties</span>( <span class="at">state =</span> <span class="st">"NY"</span>, <span class="at">cb =</span> <span class="cn">TRUE</span>, <span class="at">year =</span> <span class="dv">2024</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>NY_CarOwnership_Map <span class="ot">&lt;-</span> NYS_Counties <span class="sc">%&gt;%</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(NYVehicleData, <span class="at">by =</span> <span class="fu">c</span> (<span class="st">"NAMELSAD"</span> <span class="ot">=</span> <span class="st">"county"</span>))</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(NY_CarOwnership_Map)<span class="sc">+</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> COUNTYFP), <span class="at">color =</span><span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Car registrations by county in New York State"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
 <section id="conclusions" class="level1">
