@@ -1,6 +1,6 @@
 ---
-title: "My Final Project Template"
-author: Your name here
+title: "The Relationship between Car Owneship and Employment Rate in the State of New York"
+author: Michael Bargnesi
 subtitle: Subtitle here if desired
 date: today
 date-format: long
@@ -8,9 +8,7 @@ date-format: long
 
 # Introduction
 
-\[\~ 200 words\]
-
-Clearly stated background and questions / hypotheses / problems being addressed. Sets up the analysis in an interesting and compelling way. Include figures if you like.
+In the State of New York, car dependency has become an important fact within the work culture for many New Yorkers across the state. The question
 
 # Materials and methods
 
@@ -24,9 +22,9 @@ Data: The underlying data are publicly accessible via the web and downloaded/acc
 
 You can do bullets like this:
 
--   The first most important thing
--   The second most important thing
--   The third most important thing
+- The first most important thing
+- The second most important thing
+- The third most important thing
 
 You can do numbers like this:
 
