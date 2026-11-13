@@ -1,11 +1,10 @@
 ---
-title: "The Relationship between Car Owneship and Employment Rate in the State of New York"
-author: Michael Bargnesi
-subtitle: Data: Ny.Data.gov
+title: "The Relationship between Car Ownership and Employment Rate in New York State"
+author: "Michael Bargnesi"
+subtitle: "Data: Data.ny.gov"
 date: today
 date-format: long
 ---
-
 # Introduction
 
 In the State of New York, car dependency has become an important fact within the work culture for many New Yorkers across the state. The question this project will look at is what is the relationship between car ownership and the employment rate in different parts of the state? Will we find places that have high car ownership also to have greater job opportunities and employment rate?
@@ -14,9 +13,6 @@ If so, how can this research be used to help those who don't own a car, still ha
 
 The goal of this Project
 
-# Materials and methods
-
-\[\~ 200 words\]
 
 The data being used to with in this project can all be found within NY's data. gov website
 
@@ -35,8 +31,6 @@ You can do numbers like this:
 1.  The first most important thing
 2.  The second most important thing
 3.  The third most important thing
-
-See <http://rmarkdown.rstudio.com/> for all the amazing things you can do.
 
 Here's my first code chunk.
 
@@ -79,11 +73,7 @@ data %>%
                   c("striped", "hover", "condensed", "responsive")) #apply other formatting
 ```
 
-Add any additional processing steps here.
 
-# Results
-
-\[\~200 words\]
 
 Tables and figures (maps and other graphics) are carefully planned to convey the results of your analysis. Intense exploration and evidence of many trials and failures. The author looked at the data in many different ways before coming to the final presentation of the data.
 
@@ -113,7 +103,6 @@ dygraph(nhtemp, main = "New Haven Temperatures") |>
 
 # Conclusions
 
-\[\~200 words\]
 
 Clear summary adequately describing the results and putting them in context. Discussion of further questions and ways to continue investigation.
 
