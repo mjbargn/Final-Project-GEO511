@@ -14,8 +14,11 @@ If so, how can this research be used to help those who don't own a car, still ha
 
 For Peer Reviwer:
 (\*Looking for advice on what else to add here to make it a little bit more enticing!)
+Note here: Really interesting idea! There is definetly questions to be answered here, not having a car in NYS is like loosing your legs... To answer your question, you could try to make the case that job growth is occuring outside of areas with affordable housing/ e.g. people who live in low income neighborhoods may have less job oppurtunities close to them, and would then require transportation further away for work. 
++ Also, it might be good to mention here the hidden costs that come with car ownership, insurance, gas, maintance etc., all things that could make ownership difficult. --> reaserch could serve as proof to policy makers/planning boards that could encourage investments in transportation corridors conecting low income neighborhoods to zones with high employment/jobs! 
+#The data being used to with in this project can all be found within NY's data. gov website #note: good open source data! 
 
-The data being used to with in this project can all be found within NY's data. gov website
+#At this portion it would be good to include a methods section, go into a little more detail on how your reaserch plans to answer your question. 
 
 # Download / Load Required Packages
 
@@ -51,14 +54,18 @@ NY_CarOwnership_Map <- NYS_Counties %>%
 
 ggplot(NY_CarOwnership_Map)+
   geom_sf(aes(fill = COUNTYFP), color ="blue")+
-  labs(title = "Car registrations by county in New York State")
+  labs(title = "Car registrations by county in New York State") 
 
 ```
 For peer reviewer:
 * I would love suggestions on how to tweak this map. It's not really finding registrations record_type keeps coming as NA, might be an issue with how I left_joined the data? I'm trying to make it where the map has the density of registrations of vehicles in each county?
+#Note: I googled this! Apparantly the dataset "w4pv-hbkt" and the dataset "NAMELSAD" store the counties differently, NAMELSAD stores them as "Name County" and "w4pv-hbkt" stores them as "NAME" - you'd have to clean the datasets so the name column is the same format in both before joining - mutate, str_to_upper, and str_remove might help here? 
+
 
 
 *After this map is fixed, an employment rate map of ny will be created, and then I will be using those two data sets and creating a map that has both the car ownership and employment rate in one map to see the relationships
+
+#Note: Are you planning on doing this reaserch entirely on the county level? My one concern would be that rural counties will look very empty while more populated counties will have very high car counts by comparison, the higher counts in populated counties might mask low income areas - maybe using a regression analysis could account for this (Though to run a regression you'd have to create some sort of ownership rate, maybe ownership/population or vheicles per house hold)? Another thing, NYC would probably have lower car ownership due to the subway, but employment might not be as effected in that case which could also skew the analysis- in that case maybe NYC could be used as comparsion for the rest of NYS as an area with high employment and low car ownership? Please ignore this if you were already planning on accounting for these suggestions though! 
 
 * Everything below is from the orginial index and has not been updated yet!
 
@@ -69,3 +76,4 @@ Clear summary adequately describing the results and putting them in context. Dis
 # References
 
 All sources are cited in a consistent manner
+#Final note: really cool idea, i'm sure this will be a great project. Good job! 
