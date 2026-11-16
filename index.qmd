@@ -13,7 +13,7 @@ In the State of New York, car dependency has become an important fact within the
 If so, how can this research be used to help those who don't own a car, still have access to job opportunities across the state? The potential answers to this question could also help explain how car ownership is crucial for working in the modern era today.
 
 For Peer Reviwer:
-(\*Looking for advice on what else to add here to make it a little bit more enticing!)
+(\*Looking for advice on what else to add here to make it a little bit more enticing!) # Michael, I love this idea! My suggestion here would be to maybe consider other transportation methods for people who don't have cars/how a lack of ample public transportation negtaively impacts people. Overall, really solid context and clear goals here, nice job!
 
 The data being used to with in this project can all be found within NY's data. gov website
 
@@ -55,7 +55,7 @@ ggplot(NY_CarOwnership_Map)+
 
 ```
 For peer reviewer:
-* I would love suggestions on how to tweak this map. It's not really finding registrations record_type keeps coming as NA, might be an issue with how I left_joined the data? I'm trying to make it where the map has the density of registrations of vehicles in each county?
+* I would love suggestions on how to tweak this map. It's not really finding registrations record_type keeps coming as NA, might be an issue with how I left_joined the data? I'm trying to make it where the map has the density of registrations of vehicles in each county? # Excellent data query-ing and analysis, thus far! While I'm not sure how to solve the NA problem, once that's squared away I think all you'd need to do to map registration density is swap fill = COUNTYFP with fill = registrations (or your registration column name). Looking forward to your final results! 
 
 
 *After this map is fixed, an employment rate map of ny will be created, and then I will be using those two data sets and creating a map that has both the car ownership and employment rate in one map to see the relationships
