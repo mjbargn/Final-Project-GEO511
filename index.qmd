@@ -5,7 +5,6 @@ subtitle: "Data: Data.ny.gov"
 date: today
 date-format: long
 execute:
-  echo: false
   message: false 
   warning: false
 ---
@@ -50,7 +49,7 @@ NYVehicleData <- nys_pull_dataset(dataset = "w4pv-hbkt", where = "record_type = 
 
 ```
 
-# Map / Filter the Vehicle Data
+# Vehicle Registrations Per County Map for NY: 
 ```{r}
 #|echo: false
 #|message: false 
@@ -63,7 +62,9 @@ Vehicle_byCounty <- NYVehicleData %>%
     registrations = n())
 
 NYS_Counties <- NYS_Counties %>%
-  mutate(county = str_remove(NAMELSAD, " County$"))
+  mutate(
+    county = NAMELSAD %>%
+      str_remove(" County$"))
 
 Vehicle_byCounty <- Vehicle_byCounty %>%
   mutate(county = str_to_title(county))
@@ -79,7 +80,21 @@ ggplot(NY_CarOwnership_Map)+
 ```
 
 
-* Everything below is from the orginial index and has not been updated yet!
+#Employment Rate Map for NY:
+```{r}
+Employment_byCounty <- NYCountyEmployData %>%
+  filter(
+    str_ends(area, "County"),
+    year == 2025,
+  ) %>%
+ mutate(employment_rate = (employed / laborforce) * 100, 
+        county = area)
+
+Employment_map <- NYS_Counties %>%
+  left_join( Employment_byCounty, by = "county")
+```
+
+
 
 # Conclusions
 
