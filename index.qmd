@@ -4,7 +4,6 @@ author: "Michael Bargnesi"
 subtitle: "Data: Data.ny.gov"
 date: today
 date-format: long
-execute:
   message: false 
   warning: false
 ---
@@ -22,7 +21,6 @@ The data being used to with in this project can all be found within NY's data. g
 # Download / Load Required Packages
 
 ```{r}
-#|echo: false
 #|message: false 
 #'install.packages("nysOpenData")
 #'installed.packages("tigris")
